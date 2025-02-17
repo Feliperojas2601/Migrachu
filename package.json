@@ -1,0 +1,30 @@
+{
+  "name": "migrachu",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "setup": "cross-env NODE_ENV=prod ts-node ./src/config/setup.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Feliperojas2601/Migrachu.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Feliperojas2601/Migrachu/issues"
+  },
+  "homepage": "https://github.com/Feliperojas2601/Migrachu#readme",
+  "description": "",
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@sequelize/postgres": "^7.0.0-alpha.44",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7"
+  }
+}
