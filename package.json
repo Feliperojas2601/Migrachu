@@ -4,7 +4,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "cross-env NODE_ENV=prod ts-node ./src/config/setup.ts"
+    "setup": "cross-env NODE_ENV=prod ts-node ./src/config/setup.ts", 
+    "sync-dev": "cross-env NODE_ENV=dev ts-node ./src/sync.ts",
+    "sync-stg": "cross-env NODE_ENV=stg ts-node ./src/sync.ts",
+    "sync-prod": "cross-env NODE_ENV=prod ts-node ./src/sync.ts"
   },
   "repository": {
     "type": "git",

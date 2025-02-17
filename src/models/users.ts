@@ -4,9 +4,22 @@ import { Model, DataTypes } from '@sequelize/core';
         class Users extends Model {}
 
         Users.init({
-            id: DataTypes.INTEGER,
-  name: DataTypes.STRING,
-  email: DataTypes.STRING
+          id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+          },
+  name: {
+            type: DataTypes.STRING,
+            
+          },
+  email: {
+            type: DataTypes.STRING,
+            
+          },
+  newField: {
+            type: DataTypes.STRING,
+            
+          }
         }, {
           sequelize,
           modelName: 'users',

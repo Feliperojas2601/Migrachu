@@ -4,10 +4,22 @@ import { Model, DataTypes } from '@sequelize/core';
         class Orders extends Model {}
 
         Orders.init({
-            id: DataTypes.INTEGER,
-  user_id: DataTypes.INTEGER,
-  total_amount: DataTypes.DECIMAL,
-  created_at: DataTypes.DATE
+          id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+          },
+  user_id: {
+            type: DataTypes.INTEGER,
+            
+          },
+  total_amount: {
+            type: DataTypes.DECIMAL,
+            
+          },
+  created_at: {
+            type: DataTypes.STRING,
+            
+          }
         }, {
           sequelize,
           modelName: 'orders',

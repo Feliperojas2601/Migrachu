@@ -62,15 +62,17 @@ To set up Migrachu, follow these steps:
 
 After set up, to use Migrachu to control migrations, follow these steps and rules:
 
-1. Create a migration file:
-  ```sh
-  npm run create-migration <migration-name>
+### Sync 
+
+1. Modify the model needed in src/models.
+2. Add the migration sync to sync.ts in src/,
+  ```js
+  await Model.sync({ alter: true });
   ```
-2. Apply the migrations to your database:
+3. Run sync:
   ```sh
-  npm run migrate
+  npm run sync-${NODE_ENV}
   ```
-3. Rollback the last migration:
-  ```sh
-  npm run rollback
-  ```
+4. Note: Here we sync the model we want, comment the models you don't need to sync and uncomment the ones you modify
+
+### Other type of migrations 
