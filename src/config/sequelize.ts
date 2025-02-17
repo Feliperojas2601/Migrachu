@@ -11,4 +11,5 @@ export const sequelize = new Sequelize({
   password: env.password,
   host: env.host,
   port: env.port,
+  schema: 'public',
 });
