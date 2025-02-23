@@ -1,4 +1,5 @@
 # Migrachu
+![Migrachu](migrachu.png)
 
 Migrachu is a migration tool for Postgres DB's.
 
