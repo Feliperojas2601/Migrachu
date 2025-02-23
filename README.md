@@ -76,3 +76,13 @@ After set up, to use Migrachu to control migrations, follow these steps and rule
 4. Note: Here we sync the model we want, comment the models you don't need to sync and uncomment the ones you modify
 
 ### Other type of migrations 
+
+All migrations must implement the base migration abstract class, you can use some util functions to get excel, csv or json data into an object (be aware of the file size) and the migration should implement the up and down method with the specific migration logic. 
+1. Run up: 
+  ```sh
+  npm run migrate-${NODE_ENV} migrationFileName
+  ```
+2. Run down: 
+  ```sh
+  npm run migrate-${NODE_ENV} migrationFileName down
+  ```

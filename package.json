@@ -4,10 +4,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "setup": "cross-env NODE_ENV=prod ts-node ./src/config/setup.ts", 
+    "setup": "cross-env NODE_ENV=prod ts-node ./src/config/setup.ts",
     "sync-dev": "cross-env NODE_ENV=dev ts-node ./src/sync.ts",
     "sync-stg": "cross-env NODE_ENV=stg ts-node ./src/sync.ts",
-    "sync-prod": "cross-env NODE_ENV=prod ts-node ./src/sync.ts"
+    "sync-prod": "cross-env NODE_ENV=prod ts-node ./src/sync.ts", 
+    "migrate-dev": "cross-env NODE_ENV=dev ts-node ./src/migrate.ts",
+    "migrate-stg": "cross-env NODE_ENV=stg ts-node ./src/migrate.ts",
+    "migrate-prod": "cross-env NODE_ENV=prod ts-node ./src/migrate.ts"
   },
   "repository": {
     "type": "git",
@@ -28,6 +31,8 @@
   "dependencies": {
     "@sequelize/postgres": "^7.0.0-alpha.44",
     "cross-env": "^7.0.3",
-    "dotenv": "^16.4.7"
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.4.7",
+    "xlsx": "^0.18.5"
   }
 }
