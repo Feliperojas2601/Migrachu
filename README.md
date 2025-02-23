@@ -80,9 +80,9 @@ After set up, to use Migrachu to control migrations, follow these steps and rule
 All migrations must implement the base migration abstract class, you can use some util functions to get excel, csv or json data into an object (be aware of the file size) and the migration should implement the up and down method with the specific migration logic. 
 1. Run up: 
   ```sh
-  npm run migrate-${NODE_ENV} migrationFileName
+  npm run migrate-${NODE_ENV} myFirstMigration
   ```
 2. Run down: 
   ```sh
-  npm run migrate-${NODE_ENV} migrationFileName down
+  npm run migrate-${NODE_ENV} myFirstMigration down
   ```
